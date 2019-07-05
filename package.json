@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "reset": "node delete-index.js && node create-index.js && node populate.js",
+    "run-worker": "node worker.js"
+  },
+  "dependencies": {
+    "elasticsearch": "^16.2.0",
+    "lodash": "^4.17.11",
+    "uuid": "^3.3.2"
+  }
+}
