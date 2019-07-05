@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "reset": "node delete-index.js && node create-index.js && node populate.js",
+    "setup": "node delete-index.js && node create-index.js && node populate.js",
     "run-worker": "node worker.js"
   },
   "dependencies": {
