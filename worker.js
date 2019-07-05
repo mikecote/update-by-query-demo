@@ -15,7 +15,7 @@ setInterval(() => {
 
         // Claim tasks
         const updateByQueryResult = await esClient.updateByQuery({
-            index: 'test',
+            index: config.esIndex,
             refresh: true,
             max_docs: config.workerConcurrency,
             conflicts: 'proceed',
@@ -59,7 +59,7 @@ setInterval(() => {
 
         // Get claimed tasks
         const result = await esClient.search({
-            index: 'test',
+            index: config.esIndex,
             size: config.workerConcurrency,
             body: {
                 query: {
@@ -93,7 +93,7 @@ setInterval(() => {
         }
         const bulkResult = await esClient.bulk({
             refresh: false,
-            index: 'test',
+            index: config.esIndex,
             body: params,
         });
 

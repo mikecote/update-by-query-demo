@@ -13,7 +13,7 @@ const recordsToCreate = _.times(config.numRecordsToPopulate, (i) => ({
 const batches = _.chunk(recordsToCreate, 500);
 
 (async () => {
-    console.log(`Creating ${config.numRecordsToPopulate} records...`);
+    console.log(`Creating ${config.numRecordsToPopulate} tasks...`);
     for (const batch of batches) {
         const params = [];
         for (const row of batch) {
@@ -25,5 +25,5 @@ const batches = _.chunk(recordsToCreate, 500);
             body: params,
         });
     }
-    console.log(`Finished creating ${config.numRecordsToPopulate} records`);
+    console.log(`Finished creating ${config.numRecordsToPopulate} tasks`);
 })();
