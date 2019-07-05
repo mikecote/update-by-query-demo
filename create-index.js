@@ -5,6 +5,10 @@ const esClient = require('./es');
     await esClient.indices.create({
         index: config.esIndex,
         body: {
+            settings: {
+                number_of_shards: 1,
+                number_of_replicas: 0,
+            },
             mappings: {
                 properties: {
                     taskId: { type: 'integer' },
