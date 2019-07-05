@@ -5,9 +5,9 @@ const config = require('./config');
 let counter = 0;
 
 setInterval(() => {
-    console.log(`I have processed ${counter} tasks in the past 10s`);
+    console.log(`I have processed ${counter} tasks in the past 5s`);
     counter = 0;
-}, 10000);
+}, 5000);
 
 (async () => {
     while (true) {
@@ -53,6 +53,7 @@ setInterval(() => {
                 ]
             }
         });
+
         if (updateByQueryResult.total < config.workerConcurrency) {
             console.log(`Did not claim full amount of tasks, only ${updateByQueryResult.total} but should of claimed ${config.workerConcurrency}`);
         }
