@@ -6,8 +6,8 @@ const esClient = require('./es');
         index: config.esIndex,
         body: {
             settings: {
-                number_of_shards: 1,
-                number_of_replicas: 0,
+                number_of_shards: config.numOfShards,
+                number_of_replicas: config.numOfReplicas,
             },
             mappings: {
                 properties: {
