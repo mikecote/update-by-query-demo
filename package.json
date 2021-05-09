@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "elasticsearch": "^16.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "uuid": "^3.3.2"
   }
 }
